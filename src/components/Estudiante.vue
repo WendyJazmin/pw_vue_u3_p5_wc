@@ -8,17 +8,21 @@
   
   <div class="container2">
     <!--DATOS DEL ESTUDIANTE-->
-    <p type="Nombre: "><input v-model="nombre" type="text"></p>
-    <p type ="Apellido:"><input v-model="apellido" type="text"/></p>
-    <p type = "Género:"><input v-model="genero" type="text"/></p>
-    <p type = "Fecha de Nacimiento:"><input v-model="fechaNacimiento" type="text"/></p>
-    <p type = "Correo Electrónico:"> <input v-model="correoElectronico" type="text"/></p>
-    <p type = "Número de Teléfono:"> <input v-model="numeroTelefono" type="text"/></p>
-    <p type = "Dirección:"><input v-model="direccion" type="text"/></p>
-    <p type = "Año de Ingreso:"><input v-model="anioIngreso" type="text"/></p>
-    <p type = "Carrera:"><input v-model="carrera" type="text"/></p>
+    <p type="Nombre: "><input v-model="nombre" type="text" placeholder="Nombre"></p>
+    <p type ="Apellido:"><input v-model="apellido" type="text" placeholder="Apellido"/></p>
+    <p type = "Género:"><input v-model="genero" type="text" placeholder="Género"/></p>
+    <p type = "Fecha de Nacimiento:"><input v-model="fechaNacimiento" type="text" placeholder="Fecha de Nacimiento"/></p>
+    <p type = "Correo Electrónico:"> <input v-model="correoElectronico" type="text" placeholder="Correo Electrónico"/></p>
+    <p type = "Número de Teléfono:"> <input v-model="numeroTelefono" type="text" placeholder="Número de Teléfono"/></p>
+    <p type = "Dirección:"><input v-model="direccion" type="text" placeholder="Dirección"/></p>
+    <p type = "Año de Ingreso:"><input v-model="anioIngreso" type="text" placeholder="Año de Ingreso"/></p>
+    <p type = "Carrera:"><input v-model="carrera" type="text" placeholder="Carrera"/></p>
     
     <button @click="insertar">Insertar</button>
+
+    <button @click="actualizar">Actualizar</button>
+
+    <button @click="eliminar">Eliminar</button>
   </div>
   
 
@@ -26,7 +30,10 @@
 
 <script>
 
-import {consultarEstudianteFachada, insertarFachada} from "../helpers/clienteEstudiante.js"
+import {consultarEstudianteFachada, 
+    insertarFachada, 
+    actualizarFachada,
+    eliminarFachada} from "../helpers/clienteEstudiante.js"
 
 export default {
     data(){
@@ -78,7 +85,30 @@ export default {
 
             await insertarFachada(estuBody);
         },
+
+        async actualizar(){
+
+         const body =   {
+  
+            nombre: "Daniel",
+            apellido: "Yepez",
+            genero: "masculino",
+            fechaNacimiento: "1995-06-03",
+            correoElectronico: "davidYepez@hotmail",
+            numeroTelefono: "342013431",
+            direccion: "Av. Amazonas",
+            anioIngreso: 2016,
+            carrera: "Ingeniería en Computación"
+
+ 
+        }
+            await actualizarFachada (this.id, body);
+        },
+
+        async eliminar(){
+      await eliminarFachada(this.id);
     }
+    },
 };
 </script>
 
