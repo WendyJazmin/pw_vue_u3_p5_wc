@@ -2,7 +2,7 @@
   <h1>Componente Estudiante</h1>
 
   <div class="container1">
-    <p type = "ID:"><input  v-model="id" type="text"></p>
+    <p type = "ID:"><input  v-model="id" type="text" placeholder="ingrese ID"></p>
     <button @click="consultarPorId">Consultar</button>
   </div>
   
@@ -59,13 +59,13 @@ export default {
 
            this.nombre = data.nombre;
            this.apellido = data.apellido;
-            this.genero = data.genero,
-            this.fechaNacimiento = data.fechaNacimiento,
-            this.correoElectronico = data.correoElectronico,
-            this.numeroTelefono = data.numeroTelefono,
-            this.direccion = data.direccion,
-            this.anioIngreso = data.anioIngreso,
-            this.carrera = data.carrera
+           this.genero = data.genero,
+           this.fechaNacimiento = data.fechaNacimiento,
+           this.correoElectronico = data.correoElectronico,
+           this.numeroTelefono = data.numeroTelefono,
+           this.direccion = data.direccion,
+           this.anioIngreso = data.anioIngreso,
+           this.carrera = data.carrera
         },
 
        async insertar(){
@@ -90,24 +90,23 @@ export default {
 
          const body =   {
   
-            nombre: "Daniel",
-            apellido: "Yepez",
-            genero: "masculino",
-            fechaNacimiento: "1995-06-03",
-            correoElectronico: "davidYepez@hotmail",
-            numeroTelefono: "342013431",
-            direccion: "Av. Amazonas",
-            anioIngreso: 2016,
-            carrera: "Ingeniería en Computación"
-
+            nombre: this.nombre,
+            apellido: this.apellido,
+            genero: this.genero,
+            fechaNacimiento: this.fechaNacimiento,
+            correoElectronico: this.correoElectronico,
+            numeroTelefono: this.numeroTelefono,
+            direccion: this.direccion,
+            anioIngreso: this.anioIngreso,
+            carrera: this.carrera
  
         }
             await actualizarFachada (this.id, body);
         },
 
         async eliminar(){
-      await eliminarFachada(this.id);
-    }
+         await eliminarFachada(this.id);
+        }
     },
 };
 </script>

@@ -1,14 +1,14 @@
 <template>
   <h1>Página Eliminar</h1>
 
-  <input  v-model="id" type="text">
+  <input  v-model="id" type="text" placeholder="ingrese ID">
   <button @click="eliminar">Eliminar</button>
+  
 </template>
 
 <script>
 
-import {
-    eliminarFachada} from "../helpers/clienteEstudiante.js"
+import {eliminarFachada} from "../helpers/clienteEstudiante.js"
 
 export default {
 

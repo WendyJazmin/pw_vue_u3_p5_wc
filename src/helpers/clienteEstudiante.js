@@ -4,9 +4,8 @@ import axios from "axios"; //siempre desde todo archivo cliente se debe hacer la
 
 
 
+//------------------------------------ FUNCIONES -----------------------------------
 
-
-//FUNCIONES
 //CONSULTAR ESTUDIANTE
 const consultarEstudiante = async (id) => {
 
@@ -24,25 +23,22 @@ const insertar = async (body) =>{
     const data = axios.post(`http://localhost:8080/API/v1.0/Matricula/estudiantes`,body).then(r => r.data)
     console.log(data)
 }
+
 //ACTUALIZAR
 //http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}
 const actualizar = async (id, body) => {
-    const data = axios.put(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`,body).then(r => r.data)
-    console.log(data)
+    const data = axios.put(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`,body).then(r => r.data);
+    console.log(data);
 }
 
 //ELIMINAR
 const eliminar = async (id) => {
-    try {
-        const response = await axios.delete(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`);
-        console.log(response.data);
-        return response.data;
-    } catch (error) {
-        console.error("Error al eliminar el estudiante:", error);
-        throw error; // O manejar el error de manera que prefieras
-    }
+    const data = axios.delete(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`).then(r => r.data);
+    console.log(data);
 }
-//FACHADAS---------------------
+
+
+//---------------------------------- FACHADAS --------------------------------------
 
 //se necesitan exportar varios métodos: se tiene que colocar export en cada método fachada
 //await -> es para esperar una respuesta
@@ -57,11 +53,12 @@ export const insertarFachada = async (body) => {
     await insertar(body);
 }
 
-
+//ACTUALIZAR
 export const actualizarFachada = async (id,body) =>{
     await actualizar(id, body);
 }
 
-export const eliminarFachada = async (id) =>{
+//ELIMINAR
+export const eliminarFachada = async (id) => {
     await eliminar(id);
 }
