@@ -33,11 +33,15 @@ const actualizar = async (id, body) => {
 
 //ELIMINAR
 const eliminar = async (id) => {
-    const data = axios.delete(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`).then(r => r.data)
-    console.log(data);
+    try {
+        const response = await axios.delete(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`);
+        console.log(response.data);
+        return response.data;
+    } catch (error) {
+        console.error("Error al eliminar el estudiante:", error);
+        throw error; // O manejar el error de manera que prefieras
+    }
 }
-
-
 //FACHADAS---------------------
 
 //se necesitan exportar varios métodos: se tiene que colocar export en cada método fachada
