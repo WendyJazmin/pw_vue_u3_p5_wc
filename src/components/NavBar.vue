@@ -21,11 +21,12 @@ div a {
     color: #2c3e50;
     margin: 0px 10px;
     font-weight: bold;
-    border: 1px solid;
+    border: solid;
     padding: 10px 10px;
     border-radius: 10px;
-    background-color: rgb(203, 215, 255);
-}
+    background-color: rgb(214, 224, 255)
+  }
+  
 .router-link-exact-active{
     background-color: white;
 }
