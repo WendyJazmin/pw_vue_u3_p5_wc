@@ -14,7 +14,7 @@ const routes = [
         component: ()=> import('@/pages/EstudianteActualizar')//carga perezosa
     },
     {
-        path: '/consultar',
+        path: '/consultar/:id',
         component: ()=> import('@/pages/EstudianteConsultar')
     },
     {
@@ -33,5 +33,4 @@ const routes = [
  
 const router = createRouter({history: createWebHashHistory(), routes})
  
-
 export default router
