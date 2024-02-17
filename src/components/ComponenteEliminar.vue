@@ -1,4 +1,4 @@
-<!--TAREA 13-->
+npm insta<!--TAREA 13-->
 <template>
    <h1>ELIMINAR ESTUDIANTE</h1>
 

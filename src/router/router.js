@@ -2,27 +2,32 @@
 
 import { createRouter, createWebHashHistory } from 'vue-router'
  
-import EstudianteActualizar from '../pages/EstudianteActualizar.vue'
-import EstudianteConsultar from '../pages/EstudianteConsultar.vue'
-import EstudianteEliminar from '../pages/EstudianteEliminar.vue'
-import EstudianteGuardar from '../pages/EstudianteGuardar.vue'
+//import EstudianteActualizar from '../pages/EstudianteActualizar.vue'
+//import EstudianteConsultar from '../pages/EstudianteConsultar.vue'
+//import EstudianteEliminar from '../pages/EstudianteEliminar.vue'
+//import EstudianteGuardar from '../pages/EstudianteGuardar.vue'
+//import NoFoundPage from '../pages/NoFoundPage.vue'
  
 const routes = [
     {
         path: '/actualizar',
-        component: EstudianteActualizar
+        component: ()=> import('@/pages/EstudianteActualizar')//carga perezosa
     },
     {
         path: '/consultar',
-        component: EstudianteConsultar
+        component: ()=> import('@/pages/EstudianteConsultar')
     },
     {
         path: '/eliminar',
-        component: EstudianteEliminar
+        component:()=> import('@/pages/EstudianteEliminar')
     },
     {
         path: '/guardar',
-        component: EstudianteGuardar
+        component: ()=> import('@/pages/EstudianteGuardar')
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        component:  ()=> import('@/pages/NoFoundPage')
     }
 ]
  

@@ -1,17 +1,20 @@
 <template>
   <!--<EstudiantePagina></EstudiantePagina>-->
   <h1>Universidad Central del Ecuador</h1>
+  <NavBar/>
   <router-view />
   
 </template>
 
 <script>
 import EstudiantePagina from './pages/EstudiantePagina.vue'
+import NavBar from './pages/NavBar.vue'
 
 export default {
   name: 'App',
   components: {
-    EstudiantePagina
+    EstudiantePagina,
+    NavBar
   }
 }
 </script>
