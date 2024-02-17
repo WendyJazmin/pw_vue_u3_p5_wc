@@ -1,9 +1,9 @@
 <template>
   <div>
-    <router-link href="/consultar">Consultar</router>
-    <router-link href="/actualizar">Actualizar</router>
-    <router-link href="/guardar">Guardar</router>
-    <router-link href="/eliminar'">Eliminar</router>
+    <router-link to="/consultar">Consultar</router-link>
+    <router-link to="/actualizar">Actualizar</router-link>
+    <router-link to="/guardar">Guardar</router-link>
+    <router-link to="/eliminar">Eliminar</router-link>
   </div>
 </template>
 
@@ -17,10 +17,16 @@ export default {
 
 <style >
 
-div a{
-    color: black;
+div a {
+    color: #2c3e50;
     margin: 0px 10px;
-    font-weight: bold
-};
-
+    font-weight: bold;
+    border: 1px solid;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(203, 215, 255);
+}
+.router-link-exact-active{
+    background-color: white;
+}
 </style>

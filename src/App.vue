@@ -8,7 +8,7 @@
 
 <script>
 import EstudiantePagina from './pages/EstudiantePagina.vue'
-import NavBar from './pages/NavBar.vue'
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'App',

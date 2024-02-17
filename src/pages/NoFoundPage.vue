@@ -1,5 +1,6 @@
 <template>
-  <h1>Pagina no encontradada</h1>
+  <h1>Esta página no existe</h1>
+  <h3>Es posible que el enlace no exista o se haya eliminado</h3>
 </template>
 
 <script>
