@@ -1,3 +1,5 @@
+/**En el router es donde se van a configurar todas las rutas de la página web */
+
 import { createRouter, createWebHashHistory } from 'vue-router'
  
 import EstudianteActualizar from '../pages/EstudianteActualizar.vue'

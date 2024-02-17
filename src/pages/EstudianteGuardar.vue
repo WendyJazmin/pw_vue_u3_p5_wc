@@ -1,13 +1,26 @@
 <template>
-  <h1>Página Guardar</h1>
+  <h1>GUARDAR ESTUDIANTE</h1>
+  <EstudianteReutilizable boton="Insertar"/>
 </template>
 
 <script>
-export default {
 
-}
+import EstudianteReutilizable from "../components/EstudianteReutilizable.vue"
+
+export default {
+    components: {
+      EstudianteReutilizable
+  },
+};
+
+
 </script>
 
-<style>
+<style scoped>
 
+h1{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 750;/**grosor de la fuente */
+  color: rgb(66, 71, 157);
+}
 </style>

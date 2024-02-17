@@ -1,33 +1,19 @@
 <template>
-  <h1>Página Eliminar</h1>
-
-  <input  v-model="id" type="text" placeholder="ingrese ID">
-  <button @click="eliminar">Eliminar</button>
-  
+ 
+  <ComponenteEliminar/>
 </template>
 
 <script>
 
-import {eliminarFachada} from "../helpers/clienteEstudiante.js"
+  import ComponenteEliminar from "../components/ComponenteEliminar.vue"
 
-export default {
-
-  data(){
-        return{
-            id:null
-           
-        };
+  export default {
+      components: {
+      ComponenteEliminar
     },
-
-  methods:{
-    async eliminar(){
-      await eliminarFachada(this.id);
-    }
-  }
-
-}
+  };
 </script>
 
 <style>
-
+  
 </style>

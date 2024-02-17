@@ -111,7 +111,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 
 h1{
     font-family: "Quicksand", sans-serif;

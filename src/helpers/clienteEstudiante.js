@@ -11,7 +11,7 @@ const consultarEstudiante = async (id) => {
 
     //el axios ya tiene incluido implícitamente un await (await axios)
     //No hace falta declararlo, siempre lo tiene
-    const data = axios.get(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`).then(r => r.data)//.get("URL de la capacidad") se envia la URL de la capacidad
+    const data = axios.get(`http://localhost:8081/API/v1.0/Matricula/estudiantes/${id}`).then(r => r.data)//.get("URL de la capacidad") se envia la URL de la capacidad
     console.log(data);
     return data;
     // ``->"comillas simples invertidas", "comillas invertidas", o "backticks" 
@@ -20,20 +20,20 @@ const consultarEstudiante = async (id) => {
 //POST
 const insertar = async (body) =>{
     // axios.post("URL de la capacidad",body(se pone como segundo argumento del post))
-    const data = axios.post(`http://localhost:8080/API/v1.0/Matricula/estudiantes`,body).then(r => r.data)
+    const data = axios.post(`http://localhost:8081/API/v1.0/Matricula/estudiantes`,body).then(r => r.data)
     console.log(data)
 }
 
 //ACTUALIZAR
 //http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}
 const actualizar = async (id, body) => {
-    const data = axios.put(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`,body).then(r => r.data);
+    const data = axios.put(`http://localhost:8081/API/v1.0/Matricula/estudiantes/${id}`,body).then(r => r.data);
     console.log(data);
 }
 
 //ELIMINAR
 const eliminar = async (id) => {
-    const data = axios.delete(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`).then(r => r.data);
+    const data = axios.delete(`http://localhost:8081/API/v1.0/Matricula/estudiantes/${id}`).then(r => r.data);
     console.log(data);
 }
 

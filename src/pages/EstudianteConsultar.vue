@@ -1,13 +1,32 @@
 <template>
-  <h1>Página Consultar</h1>
+
+  <h1>CONSULTAR ESTUDIANTE</h1>
+ 
+  <EstudianteReutilizable boton="Consultar"/>
+  
 </template>
 
 <script>
-export default {
 
-}
+import EstudianteReutilizable from "../components/EstudianteReutilizable.vue"
+
+export default {
+    components: {
+      EstudianteReutilizable
+  },
+};
+
 </script>
 
-<style>
+<style scoped>
 
+
+  h1{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 750;/**grosor de la fuente */
+    color: rgb(107, 33, 212);
+  }
+  
 </style>
+
+
