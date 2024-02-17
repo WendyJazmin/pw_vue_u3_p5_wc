@@ -12,26 +12,12 @@ import EstudianteReutilizable from "../components/EstudianteReutilizable.vue"
 
 export default {
 
-  created(){
-    console.log(this.$route)
-    console.log(this.$route.params.id)
-    console.log(THIS.$route.query.nombre)
-    console.log(THIS.$route.query.apellido)
-    
-  },
-  
-  //
-  methods:{
-    consultar(){
-
-    }
-  },
     components: {
       EstudianteReutilizable
   },
 
   created(){
-    console.log(this.$route)
+    console.log(this.$router)
     console.log(this.$route.params.id)
     console.log(this.$route.query)
     console.log(this.$route.query.anio)

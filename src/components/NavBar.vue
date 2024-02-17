@@ -21,7 +21,7 @@ div a {
     color: #2c3e50;
     margin: 0px 10px;
     font-weight: bold;
-    border: solid;
+    border: 1px solid;
     padding: 10px 10px;
     border-radius: 10px;
     background-color: rgb(214, 224, 255)

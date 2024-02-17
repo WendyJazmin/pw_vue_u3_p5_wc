@@ -2,7 +2,7 @@
   <!--<EstudiantePagina></EstudiantePagina>-->
   <h1>Universidad Central del Ecuador</h1>
   <NavBar/>
-  <router-view />
+  <router-view /><!--Permite mostrar las páginas que se encuentran en el router.js-->
   
 </template>
 
