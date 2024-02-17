@@ -20,7 +20,8 @@ export default {
 div a{
     color: black;
     margin: 0px 10px;
-    font-weight: bold
-};
+    font-weight: bold,
+    padding:10px 10px
+}
 
 </style>
